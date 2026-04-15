@@ -165,7 +165,7 @@ sudo dmesg | tail -3
 
 ### Screenshot 1 — Multi-container supervision
 Two containers (alpha running cpu_hog, beta running io_pulse) started under one supervisor process. Supervisor terminal shows both `started container` messages with distinct PIDs.
-<img width="799" height="163" alt="Screenshot from 2026-04-12 18-29-40" src="screenshots/WhatsApp Image 2026-04-14 at 19.01.08.jpeg" />
+<img width="799" height="163" alt="Screenshot from 2026-04-12 18-29-40" src="Screenshots/WhatsApp Image 2026-04-14 at 19.01.08.jpeg" />
 
 
 ### Screenshot 2 — Metadata tracking
