@@ -175,8 +175,7 @@ Output of `engine ps` showing both containers with their PID, state, start time,
 
 ### Screenshot 3 — Bounded-buffer logging
 `engine logs alpha` and `engine logs beta` showing full output captured from both containers through the producer→buffer→consumer pipeline. Log files `logs/alpha.log` and `logs/beta.log` visible in `ls -la logs/`.
-<img width="1275" height="806" alt="Screenshot from 2026-04-13 06-18-38" src="Screenshots/WhatsApp Image 2026-04-14 at 20.58.47.jpeg
-" />
+<img width="1275" height="806" alt="Screenshot from 2026-04-13 06-18-38" src="Screenshots/WhatsApp Image 2026-04-14 at 20.58.47.jpeg" />
 
 <img width="1305" height="195" alt="Screenshot from 2026-04-13 06-18-50" src="Screenshots/WhatsApp Image 2026-04-14 at 20.05.07.jpeg" />
 
