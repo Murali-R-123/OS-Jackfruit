@@ -170,24 +170,20 @@ Two containers (alpha running cpu_hog, beta running io_pulse) started under one 
 
 ### Screenshot 2 — Metadata tracking
 Output of `engine ps` showing both containers with their PID, state, start time, soft limit, and hard limit columns populated correctly.
-<img width="802" height="142" alt="Screenshot from 2026-04-12 18-30-37" src="Screenshots
-/WhatsApp Image 2026-04-14 at 19.03.56.jpeg" />
+<img width="802" height="142" alt="Screenshot from 2026-04-12 18-30-37" src="Screenshots/WhatsApp Image 2026-04-14 at 19.03.56.jpeg" />
 
 
 ### Screenshot 3 — Bounded-buffer logging
 `engine logs alpha` and `engine logs beta` showing full output captured from both containers through the producer→buffer→consumer pipeline. Log files `logs/alpha.log` and `logs/beta.log` visible in `ls -la logs/`.
-<img width="1275" height="806" alt="Screenshot from 2026-04-13 06-18-38" src="Screenshots
-/WhatsApp Image 2026-04-14 at 20.58.47.jpeg
+<img width="1275" height="806" alt="Screenshot from 2026-04-13 06-18-38" src="Screenshots/WhatsApp Image 2026-04-14 at 20.58.47.jpeg
 " />
 
-<img width="1305" height="195" alt="Screenshot from 2026-04-13 06-18-50" src="Screenshots
-/WhatsApp Image 2026-04-14 at 20.05.07.jpeg" />
+<img width="1305" height="195" alt="Screenshot from 2026-04-13 06-18-50" src="Screenshots/WhatsApp Image 2026-04-14 at 20.05.07.jpeg" />
 
 
 ### Screenshot 4 — CLI and IPC
 `time sudo ./engine run alpha ./rootfs-alpha /cpu_hog` blocking for 9.8 seconds then printing `container 'alpha' exited state=exited code=0 sig=0`. Demonstrates the UNIX socket IPC path and blocking run semantics.
-<img width="805" height="275" alt="Screenshot from 2026-04-13 06-11-59" src="Screenshots
-/WhatsApp Image 2026-04-14 at 20.25.34.jpeg" />
+<img width="805" height="275" alt="Screenshot from 2026-04-13 06-11-59" src="Screenshots/WhatsApp Image 2026-04-14 at 20.25.34.jpeg" />
 
 
 ### Screenshot 5 — Soft-limit warning
@@ -196,25 +192,21 @@ Output of `engine ps` showing both containers with their PID, state, start time,
 [container_monitor] Registering container=memtest pid=XXXX soft=10485760 hard=20971520
 [container_monitor] SOFT LIMIT container=memtest pid=XXXX rss=17297408 limit=10485760
 ```
-<img width="1919" height="991" alt="Screenshot from 2026-04-13 15-53-09" src="Screenshots
-/WhatsApp Image 2026-04-14 at 21.25.02.jpeg" />
+<img width="1919" height="991" alt="Screenshot from 2026-04-13 15-53-09" src="Screenshots/WhatsApp Image 2026-04-14 at 21.25.02.jpeg" />
 
 
 ### Screenshot 6 — Hard-limit enforcement
 `dmesg` showing `HARD LIMIT` event followed by `engine ps` showing `state=killed` for the memtest container.
 
-<img width="1919" height="991" alt="Screenshot from 2026-04-13 15-53-09" src="Screenshots
-/WhatsApp Image 2026-04-14 at 21.25.02.jpeg" />
+<img width="1919" height="991" alt="Screenshot from 2026-04-13 15-53-09" src="Screenshots/WhatsApp Image 2026-04-14 at 21.25.02.jpeg" />
 
 
 ### Screenshot 7 — Scheduling experiment
 Two cpu_hog containers running with nice=0 and nice=15, plus cpu_hog vs io_pulse comparison. Log outputs showing io_pulse completes in ~4 seconds while cpu_hog runs for the full 10 seconds.
 
-<img width="1160" height="640" alt="Screenshot from 2026-04-13 15-49-22" src="Screenshots
-/WhatsApp Image 2026-04-14 at 20.58.47.jpeg" />
+<img width="1160" height="640" alt="Screenshot from 2026-04-13 15-49-22" src="Screenshots/WhatsApp Image 2026-04-14 at 20.58.47.jpeg" />
 
-<img width="1272" height="662" alt="Screenshot from 2026-04-13 15-49-32" src="Screenshots
-/WhatsApp Image 2026-04-14 at 21.08.29.jpeg" />
+<img width="1272" height="662" alt="Screenshot from 2026-04-13 15-49-32" src="Screenshots/WhatsApp Image 2026-04-14 at 21.08.29.jpeg" />
 
 
 
@@ -223,12 +215,9 @@ Two cpu_hog containers running with nice=0 and nice=15, plus cpu_hog vs io_pulse
 
 ---
 
-<img width="1919" height="991" alt="Screenshot from 2026-04-13 15-53-19" src="Screenshots
-/WhatsApp Image 2026-04-14 at 21.41.13.jpeg
-" />
+<img width="1919" height="991" alt="Screenshot from 2026-04-13 15-53-19" src="Screenshots/WhatsApp Image 2026-04-14 at 21.41.13.jpeg" />
 
-<img width="1919" height="166" alt="Screenshot from 2026-04-13 15-53-33" src="Screenshots
-/WhatsApp Image 2026-04-14 at 21.43.06.jpeg" />
+<img width="1919" height="166" alt="Screenshot from 2026-04-13 15-53-33" src="Screenshots/WhatsApp Image 2026-04-14 at 21.43.06.jpeg" />
 
 
 ## 4. Engineering Analysis
